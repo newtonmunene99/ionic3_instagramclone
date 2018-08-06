@@ -1,0 +1,7 @@
+{
+  "name": "ionic3_instagramclone",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
