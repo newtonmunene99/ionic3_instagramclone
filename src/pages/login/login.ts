@@ -1,25 +1,37 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the LoginPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { AlertController, LoadingController, IonicPage } from 'ionic-angular';
 
 @IonicPage()
 @Component({
   selector: 'page-login',
-  templateUrl: 'login.html',
+  templateUrl: 'login.html'
 })
 export class LoginPage {
+  public loginForm: any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(
+    public loadingCtrl: LoadingController,
+    public alertCtrl: AlertController
+  ) {}
+
+  login() {
+    const loading = this.loadingCtrl.create({
+      duration: 500
+    });
+
+    loading.onDidDismiss(() => {
+      const alert = this.alertCtrl.create({
+        title: 'Logged in!',
+        subTitle: 'Thanks for logging in.',
+        buttons: ['Dismiss']
+      });
+      alert.present();
+    });
+
+    loading.present();
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad LoginPage');
+  goToSignup() {
+    // this.navCtrl.push("SignupPage");
   }
-
 }
