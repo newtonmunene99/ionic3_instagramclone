@@ -1,0 +1,14 @@
+page-my-notifications {
+  .scroll-content {
+    .list {
+      .item {
+        span {
+          font-weight: bold;
+        }
+        button {
+          box-shadow: none;
+        }
+      }
+    }
+  }
+}

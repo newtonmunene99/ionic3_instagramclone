@@ -1,3 +1,162 @@
 page-home {
-
+  .scroll-content {
+    ion-scroll {
+      white-space: nowrap;
+      height: 80px;
+      div.scroll-content {
+        div.scroll-zoom-wrapper {
+          height: 100%;
+          display: flex;
+          flex-flow: row nowrap;
+          justify-content: center;
+          align-items: center;
+          div.story {
+            flex-basis: 50px;
+            flex-grow: 0;
+            flex-shrink: 0;
+            height: 70px;
+            margin: 0 5px;
+            div.storyphoto {
+              display: flex;
+              flex-flow: row nowrap;
+              justify-content: center;
+              align-items: center;
+              height: 70%;
+              img {
+                width: 40px;
+                height: 40px;
+                border-radius: 100%;
+              }
+            }
+            div.storyname {
+              display: flex;
+              flex-flow: row nowrap;
+              justify-content: center;
+              align-items: center;
+              height: 30%;
+              p {
+                margin: 0;
+                height: 100%;
+                font-size: 12px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                max-width: 50px;
+              }
+            }
+          }
+        }
+      }
+    }
+    div.postcard {
+      width: 100%;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+      div.cardhead {
+        width: 100%;
+        height: 40px;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        div.profileimage {
+          width: 15%;
+          height: 100%;
+          display: flex;
+          flex-flow: row nowrap;
+          justify-content: center;
+          align-items: center;
+          img {
+            width: 30px;
+            height: 30px;
+            border-radius: 100%;
+          }
+        }
+        div.profilename {
+          width: 75%;
+          height: 100%;
+          display: flex;
+          flex-flow: row nowrap;
+          justify-content: flex-start;
+          align-items: center;
+          padding-left: 2px;
+          box-sizing: border-box;
+        }
+        div.postoptions {
+          width: 10%;
+          height: 100%;
+          display: flex;
+          flex-flow: row nowrap;
+          justify-content: center;
+          align-items: center;
+          .button {
+            height: 30px;
+            width: 30px;
+            background-color: transparent;
+            color: black;
+            box-shadow: none;
+          }
+        }
+      }
+      div.cardbody {
+        width: 100%;
+        img {
+          width: 100%;
+        }
+      }
+      div.cardfooter {
+        width: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: flex-start;
+        div.postengage {
+          width: 100%;
+          height: 40px;
+          display: flex;
+          flex-flow: row nowrap;
+          justify-content: space-between;
+          align-items: center;
+          div.controls {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: flex-start;
+            align-items: center;
+            .button {
+              height: 30px;
+              width: 30px;
+              background-color: transparent;
+              color: black;
+              box-shadow: none;
+              .button-inner {
+                .ion-ios-heart-outline,
+                .ion-ios-text-outline,
+                .ion-ios-send-outline {
+                  font-weight: 900;
+                }
+              }
+            }
+          }
+          div.savepost {
+            .button {
+              height: 30px;
+              width: 30px;
+              background-color: transparent;
+              color: black;
+              box-shadow: none;
+              .button-inner {
+                .ion-ios-bookmark-outline {
+                  font-weight: 900;
+                }
+              }
+            }
+          }
+        }
+        div.postcomments {
+        }
+      }
+    }
+  }
 }
