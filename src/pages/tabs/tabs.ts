@@ -16,8 +16,9 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class TabsPage {
   tab1Root: string = 'HomePage';
   tab2Root: string = 'ExplorePage';
-  tab3Root: string = 'NotificationsPage';
-  tab4Root: string = 'ProfilePage';
+  tab3Root: string = 'UploadPage';
+  tab4Root: string = 'NotificationsPage';
+  tab5Root: string = 'ProfilePage';
   constructor(public navCtrl: NavController, public navParams: NavParams) {}
 
   ionViewDidLoad() {

@@ -7,12 +7,131 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>profile</ion-title>
+    <ion-title>nen.e_</ion-title>
+    <ion-buttons right>
+      <button ion-button icon-only>
+        <ion-icon name="time"></ion-icon>
+      </button>
+      <button ion-button icon-only>
+        <ion-icon name="person-add"></ion-icon>
+      </button>
+      <button ion-button icon-only>
+        <ion-icon name="more"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
+<ion-content>
+  <div class="profile_top">
+    <div class="upper">
+      <div class="profile_photo">
+        <img src="../../assets/imgs/example.jpeg" alt="image">
+      </div>
+      <div class="profile_info">
+        <div class="following">
+          <div class="postscount">
+            <p class="count">3</p>
+            <p class="counttag">posts</p>
+          </div>
+          <div class="followerscount">
+            <p class="count">4000</p>
+            <p class="counttag">followers</p>
+          </div>
+          <div class="followingcount">
+            <p class="count">1000</p>
+            <p class="counttag">following</p>
+          </div>
+        </div>
+        <div class="edit_profile">
+          <p class="editbtn">Edit Profile</p>
+        </div>
+      </div>
+    </div>
+    <div class="bio">
+      <p class="name">Do you know one by chance?</p>
+      <p>bla bla bla \n bla bla bla</p>
+      <a href="http://">github.com/newtonmunene99</a>
+    </div>
+  </div>
+  <div class="profile_bottom">
+    <ion-segment [(ngModel)]="photos_state">
+      <ion-segment-button value="grid">
+        <ion-icon name="grid"></ion-icon>
+      </ion-segment-button>
+      <ion-segment-button value="list">
+        <ion-icon name="list"></ion-icon>
+      </ion-segment-button>
+      <ion-segment-button value="tagged">
+        <ion-icon name="contact"></ion-icon>
+      </ion-segment-button>
+      <ion-segment-button value="saved" (ionSelect)="gotoSaved()">
+        <ion-icon name="bookmark"></ion-icon>
+      </ion-segment-button>
+    </ion-segment>
+    <div [ngSwitch]="photos_state" class="switch">
+      <ion-list *ngSwitchCase="'grid'" no-lines class="photogrid">
+        <ion-item *ngFor="let image of fakeimages">
+          <img src="../../assets/imgs/example.jpeg" alt="image">
+        </ion-item>
+      </ion-list>
+
+      <ion-list *ngSwitchCase="'list'" no-lines class="photolist">
+        <ion-item *ngFor="let image of fakeimages">
+          <div class="postcard">
+            <div class="cardhead">
+              <div class="profileimage">
+                <img src="../../assets/imgs/example.jpeg" alt="image">
+              </div>
+              <div class="profilename">nen.e_</div>
+              <div class="postoptions">
+                <button ion-button icon-only round>
+                  <ion-icon name="more"></ion-icon>
+                </button>
+              </div>
+            </div>
+            <div class="cardbody">
+              <img src="../../assets/imgs/example.jpeg" alt="image">
+            </div>
+            <div class="cardfooter">
+              <div class="postengage">
+                <div class="controls">
+                  <button ion-button icon-only round>
+                    <ion-icon name="ios-heart-outline"></ion-icon>
+                  </button>
+                  <button ion-button icon-only round>
+                    <ion-icon name="ios-text-outline"></ion-icon>
+                  </button>
+                  <button ion-button icon-only round>
+                    <ion-icon name="ios-send-outline"></ion-icon>
+                  </button>
+
+
+
+                </div>
+                <div class="savepost">
+                  <button ion-button icon-only round>
+                    <ion-icon name="ios-bookmark-outline"></ion-icon>
+                  </button>
+
+                </div>
+              </div>
+              <div class="postcomments">aa</div>
+            </div>
+          </div>
+        </ion-item>
+
+      </ion-list>
+
+      <ion-list *ngSwitchCase="'tagged'" class="photogrid">
+
+        <ion-item *ngFor="let image of fakeimages">
+          <img src="../../assets/imgs/example.jpeg" alt="image">
+        </ion-item>
+      </ion-list>
+    </div>
+  </div>
 
 </ion-content>

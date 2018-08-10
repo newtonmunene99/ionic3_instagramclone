@@ -1,3 +1,257 @@
 page-profile {
+  .scroll-content {
+    div.profile_top {
+      width: 100%;
+      display: flex;
+      flex-flow: column nowrap;
+      div.upper {
+        width: 100%;
+        display: flex;
+        flex-flow: row nowrap;
+        padding: 20px 20px 20px 0;
+        div.profile_photo {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 35%;
+          img {
+            width: 80px;
+            height: 80px;
+            border-radius: 100%;
+          }
+        }
+        div.profile_info {
+          width: 65%;
+          display: flex;
+          flex-flow: column nowrap;
+          justify-content: center;
+          align-items: center;
+          div.following {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
 
+            div.postscount,
+            div.followerscount,
+            div.followingcount {
+              display: flex;
+              flex-flow: column nowrap;
+              justify-content: center;
+              align-items: center;
+              p {
+                margin: 0 10px;
+              }
+              p.count {
+                font-size: 18px;
+                font-weight: 600;
+              }
+              p.counttag {
+                font-weight: 50;
+                font-size: 14px;
+              }
+            }
+          }
+          div.edit_profile {
+            width: 100%;
+            p.editbtn {
+              width: 100%;
+              border: solid 1px rgba(0, 0, 0, 0.5);
+              border-radius: 2px;
+              padding: 5px 0;
+              text-align: center;
+              font-weight: 500;
+            }
+          }
+        }
+      }
+      div.bio {
+        width: 100%;
+        padding: 5px 15px;
+        box-sizing: border-box;
+        p {
+          margin: 5px 0;
+        }
+        p.name {
+          font-size: 15px;
+          font-weight: 600;
+        }
+
+        a {
+          text-decoration: none;
+          color: #414f67;
+        }
+      }
+    }
+    div.profile_bottom {
+      .segment .segment-button {
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        color: rgba(0, 0, 0, 0.6);
+      }
+      .segment .segment-button.segment-activated {
+        border-color: rgba(0, 0, 0, 0.1);
+        color: #488aff;
+      }
+      div.switch {
+        .list.photogrid {
+          margin: 0;
+          display: flex;
+          flex-flow: row wrap;
+          justify-content: flex-start;
+          align-items: flex-start;
+          .item {
+            padding: 0;
+            width: 33.09%;
+            margin: 0.1%;
+            .item-inner {
+              padding: 0;
+              border-bottom: none;
+              .input-wrapper .label {
+                margin: 0;
+                img {
+                  display: block;
+                }
+              }
+            }
+          }
+          .item:nth-child(3n + 1) {
+            margin-left: 0;
+          }
+          .item:nth-child(3n + 0) {
+            margin-right: 0;
+          }
+        }
+        .list.photolist {
+          margin: 0;
+          display: flex;
+          flex-flow: column nowrap;
+          justify-content: flex-start;
+          align-items: flex-start;
+          .item {
+            padding: 0;
+            width: 100%;
+            margin: 0;
+            .item-inner {
+              padding: 0;
+              border-bottom: none;
+              .input-wrapper .label {
+                margin: 0;
+                div.postcard {
+                  width: 100%;
+                  display: flex;
+                  flex-flow: column nowrap;
+                  justify-content: center;
+                  align-items: center;
+                  div.cardhead {
+                    width: 100%;
+                    height: 40px;
+                    display: flex;
+                    flex-flow: row nowrap;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    div.profileimage {
+                      width: 15%;
+                      height: 100%;
+                      display: flex;
+                      flex-flow: row nowrap;
+                      justify-content: center;
+                      align-items: center;
+                      img {
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 100%;
+                      }
+                    }
+                    div.profilename {
+                      width: 75%;
+                      height: 100%;
+                      display: flex;
+                      flex-flow: row nowrap;
+                      justify-content: flex-start;
+                      align-items: center;
+                      padding-left: 2px;
+                      box-sizing: border-box;
+                    }
+                    div.postoptions {
+                      width: 10%;
+                      height: 100%;
+                      display: flex;
+                      flex-flow: row nowrap;
+                      justify-content: center;
+                      align-items: center;
+                      .button {
+                        height: 30px;
+                        width: 30px;
+                        background-color: transparent;
+                        color: black;
+                        box-shadow: none;
+                      }
+                    }
+                  }
+                  div.cardbody {
+                    width: 100%;
+                    img {
+                      width: 100%;
+                    }
+                  }
+                  div.cardfooter {
+                    width: 100%;
+                    display: flex;
+                    flex-flow: column nowrap;
+                    justify-content: center;
+                    align-items: flex-start;
+                    div.postengage {
+                      width: 100%;
+                      height: 40px;
+                      display: flex;
+                      flex-flow: row nowrap;
+                      justify-content: space-between;
+                      align-items: center;
+                      div.controls {
+                        display: flex;
+                        flex-flow: row nowrap;
+                        justify-content: flex-start;
+                        align-items: center;
+                        .button {
+                          height: 30px;
+                          width: 30px;
+                          background-color: transparent;
+                          color: black;
+                          box-shadow: none;
+                          .button-inner {
+                            .ion-ios-heart-outline,
+                            .ion-ios-text-outline,
+                            .ion-ios-send-outline {
+                              font-weight: 900;
+                            }
+                          }
+                        }
+                      }
+                      div.savepost {
+                        .button {
+                          height: 30px;
+                          width: 30px;
+                          background-color: transparent;
+                          color: black;
+                          box-shadow: none;
+                          .button-inner {
+                            .ion-ios-bookmark-outline {
+                              font-weight: 900;
+                            }
+                          }
+                        }
+                      }
+                    }
+                    div.postcomments {
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
