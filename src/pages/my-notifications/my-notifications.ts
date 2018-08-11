@@ -14,10 +14,22 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'my-notifications.html'
 })
 export class MyNotificationsPage {
+  rootNavCtrl: NavController;
   fakenotifications: Array<any> = new Array(20);
-  constructor(public navCtrl: NavController, public navParams: NavParams) {}
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.rootNavCtrl = navParams.get('rootNavCtrl');
+  }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad MyNotificationsPage');
+  }
+
+  goToRequests(localNavCtrl: boolean = false) {
+    if (localNavCtrl) {
+      this.navCtrl.push('FollowRequestsPage');
+    } else {
+      this.rootNavCtrl.push('FollowRequestsPage');
+    }
+  
   }
 }

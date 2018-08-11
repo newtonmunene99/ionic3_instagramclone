@@ -1,3 +1,41 @@
 page-search {
+  .searchbar-md.searchbar-has-focus.searchbar-show-cancel .searchbar-md-cancel {
+    display: none;
+  }
+  .header {
+    // .back-button.show-back-button {
+    //   display: none;
+    // }
+    .searchbar {
+      .searchbar-search-icon {
+        display: none;
+      }
 
+      .searchbar-input {
+        background-color: transparent;
+        box-shadow: none;
+        padding: 6px 55px 6px 6px;
+      }
+    }
+    .toolbar {
+      min-height: 20px;
+      padding: 4px 0 0 0;
+      .toolbar-background {
+        border-color: transparent;
+      }
+      .segment {
+        .segment-button {
+          color: black;
+          border-bottom: none;
+        }
+        .segment-button.segment-activated {
+          color: black;
+          border-bottom: 2px solid black;
+        }
+      }
+    }
+  }
+  // .header::after {
+  //   background-image: none;
+  // }
 }

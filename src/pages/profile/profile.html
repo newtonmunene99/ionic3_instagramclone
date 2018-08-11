@@ -36,17 +36,17 @@
             <p class="count">3</p>
             <p class="counttag">posts</p>
           </div>
-          <div class="followerscount">
+          <div class="followerscount" tappable (click)="gotoFollowers()">
             <p class="count">4000</p>
             <p class="counttag">followers</p>
           </div>
-          <div class="followingcount">
+          <div class="followingcount" tappable (click)="gotoFollowing()">
             <p class="count">1000</p>
             <p class="counttag">following</p>
           </div>
         </div>
         <div class="edit_profile">
-          <p class="editbtn">Edit Profile</p>
+          <p class="editbtn" tappable (click)="gotoEditProfile()">Edit Profile</p>
         </div>
       </div>
     </div>

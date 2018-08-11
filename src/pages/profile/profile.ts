@@ -28,4 +28,13 @@ export class ProfilePage {
       this.photos_state = currentSegment;
     });
   }
+  gotoEditProfile() {
+    this.navCtrl.push('EditProfilePage');
+  }
+  gotoFollowers() {
+    this.navCtrl.push('FollowersPage');
+  }
+  gotoFollowing() {
+    this.navCtrl.push('FollowingPage');
+  }
 }

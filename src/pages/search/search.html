@@ -7,12 +7,65 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>search</ion-title>
+    <ion-searchbar showCancelButton animated autocomplete='on'></ion-searchbar>
   </ion-navbar>
-
+  <ion-toolbar no-border-top>
+    <ion-segment [(ngModel)]="filter">
+      <ion-segment-button value="top">
+        TOP
+      </ion-segment-button>
+      <ion-segment-button value="people">
+        PEOPLE
+      </ion-segment-button>
+      <ion-segment-button value="tags">
+        TAGS
+      </ion-segment-button>
+      <ion-segment-button value="places">
+        PLACES
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
 </ion-header>
 
 
-<ion-content padding>
+<ion-content>
+  <div [ngSwitch]="filter">
+    <ion-list *ngSwitchCase="'top'" no-lines>
+      <ion-item *ngFor="let result of fakeresults">
+        <ion-avatar item-start>
+          <img src="../../assets/imgs/example.jpeg">
+        </ion-avatar>
+        <h2>nen.e_</h2>
+        <p>Do you know one by chance?</p>
+      </ion-item>
+    </ion-list>
+    <ion-list *ngSwitchCase="'people'" no-lines>
+      <ion-item *ngFor="let result of fakeresults">
+        <ion-avatar item-start>
+          <img src="../../assets/imgs/example.jpeg">
+        </ion-avatar>
+        <h2>nen.e_</h2>
+        <p>Do you know one by chance?</p>
+      </ion-item>
+    </ion-list>
+    <ion-list *ngSwitchCase="'tags'" no-lines>
+      <ion-item *ngFor="let result of fakeresults">
+        <ion-avatar item-start>
+          <img src="../../assets/imgs/example.jpeg">
+        </ion-avatar>
+        <h2>nen.e_</h2>
+        <p>Do you know one by chance?</p>
+      </ion-item>
+    </ion-list>
+    <ion-list *ngSwitchCase="'places'" no-lines>
+      <ion-item *ngFor="let result of fakeresults">
+        <ion-avatar item-start>
+          <img src="../../assets/imgs/example.jpeg">
+        </ion-avatar>
+        <h2>nen.e_</h2>
+        <p>Do you know one by chance?</p>
+      </ion-item>
+    </ion-list>
+  </div>
 
 </ion-content>

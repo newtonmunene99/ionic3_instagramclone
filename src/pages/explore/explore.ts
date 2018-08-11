@@ -11,15 +11,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 @IonicPage()
 @Component({
   selector: 'page-explore',
-  templateUrl: 'explore.html',
+  templateUrl: 'explore.html'
 })
 export class ExplorePage {
+  fakeimages: Array<any> = new Array(20);
+  constructor(public navCtrl: NavController, public navParams: NavParams) {}
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  gotoSearch() {
+    this.navCtrl.push('SearchPage');
   }
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad ExplorePage');
+  gotoExploreList() {
+    this.navCtrl.push('ExploreListPage');
   }
-
 }

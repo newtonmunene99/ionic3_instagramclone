@@ -1,3 +1,32 @@
 page-explore {
-
+  .scroll-content {
+    .list {
+      margin: 0;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+      .item {
+        padding: 0;
+        width: 33.09%;
+        margin: 0.1%;
+        .item-inner {
+          padding: 0;
+          border-bottom: none;
+          .input-wrapper .label {
+            margin: 0;
+            img {
+              display: block;
+            }
+          }
+        }
+      }
+      .item:nth-child(3n + 1) {
+        margin-left: 0;
+      }
+      .item:nth-child(3n + 0) {
+        margin-right: 0;
+      }
+    }
+  }
 }

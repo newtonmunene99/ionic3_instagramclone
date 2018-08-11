@@ -1,7 +1,19 @@
 <ion-content>
 
   <ion-list no-lines>
-    <ion-item *ngFor="let notification of fakenotifications">
+    <ion-item tappable (click)="goToRequests()">
+      <ion-avatar item-start>
+        <img src="../../assets/imgs/example.jpeg">
+      </ion-avatar>
+      <p>
+        <span>Follow Requests</span>
+      </p>
+      <p>Approve or Ignore requests</p>
+    </ion-item>
+  </ion-list>
+  <ion-item-group class="list">
+    <ion-item-divider color="light">Today</ion-item-divider>
+    <ion-item no-lines *ngFor="let notification of fakenotifications">
       <ion-avatar item-start>
         <img src="../../assets/imgs/example.jpeg">
       </ion-avatar>
@@ -11,6 +23,6 @@
       <p>10h</p>
       <button ion-button item-end>Follow</button>
     </ion-item>
-  </ion-list>
+  </ion-item-group>
 
 </ion-content>
