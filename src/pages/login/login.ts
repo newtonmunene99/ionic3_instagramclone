@@ -5,6 +5,8 @@ import {
   IonicPage,
   NavController
 } from 'ionic-angular';
+import { AuthProvider } from '../../providers/auth/auth';
+
 
 @IonicPage()
 @Component({
@@ -14,27 +16,30 @@ import {
 export class LoginPage {
   public loginForm: any;
 
+  username: any;
+  password: any;
   constructor(
     public loadingCtrl: LoadingController,
     public alertCtrl: AlertController,
-    public navCtrl: NavController
-  ) {}
+    public navCtrl: NavController,
+    public authService: AuthProvider
+  ) { }
 
   login() {
-    const loading = this.loadingCtrl.create({
-      duration: 500
-    });
-
-    loading.onDidDismiss(() => {
-      const alert = this.alertCtrl.create({
-        title: 'Logged in!',
-        subTitle: 'Thanks for logging in.',
-        buttons: ['Dismiss']
+    this.authService
+      .login(this.username, this.password)
+      .then(res => {
+        console.log(res);
+        const alert = this.alertCtrl.create({
+          title: 'Logged in!',
+          subTitle: 'Thanks for logging in.',
+          buttons: ['Dismiss']
+        });
+        alert.present();
+      })
+      .catch(err => {
+        console.error(err);
       });
-      alert.present();
-    });
-
-    loading.present();
   }
 
   goToSignup() {

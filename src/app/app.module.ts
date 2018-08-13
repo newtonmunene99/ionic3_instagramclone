@@ -5,6 +5,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SuperTabsModule } from 'ionic2-super-tabs';
 import { MyApp } from './app.component';
+import { HttpClientModule } from '../../node_modules/@angular/common/http';
+import { AuthProvider } from '../providers/auth/auth';
 
 @NgModule({
   declarations: [MyApp],
@@ -14,14 +16,16 @@ import { MyApp } from './app.component';
       tabsHideOnSubPages: true,
       pageTransition: 'ios-transition'
     }),
-    SuperTabsModule.forRoot()
+    SuperTabsModule.forRoot(),
+    HttpClientModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [MyApp],
   providers: [
     StatusBar,
     SplashScreen,
-    { provide: ErrorHandler, useClass: IonicErrorHandler }
+    { provide: ErrorHandler, useClass: IonicErrorHandler },
+    AuthProvider
   ]
 })
 export class AppModule {}

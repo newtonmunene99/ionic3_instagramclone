@@ -6,17 +6,19 @@
   <img class="logo" src="../../assets/imgs/logo-instagram.png" />
   <div padding>
     <ion-item>
-      <ion-input type="text" placeholder="Username"></ion-input>
+      <ion-input type="text" placeholder="Username" [(ngModel)]="username"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-input type="password" placeholder="Password"></ion-input>
+      <ion-input type="password" placeholder="Password" [(ngModel)]="password"></ion-input>
     </ion-item>
-    <button ion-button block outline (click)="login()" color="light" class="login-button">Login</button>
+
+    <button ion-button block outline color="light" class="login-button" [disabled]="!username || !password" (click)="login()">Login</button>
+
   </div>
   <div class="strike">
     <span>OR</span>
   </div>
-  <button ion-button block clear (click)="login()" color="light" class="login-button">
+  <button ion-button block clear color="light" class="login-button">
     <ion-icon name="logo-facebook"></ion-icon> Login with Facebook</button>
 </ion-content>
 <ion-footer>
