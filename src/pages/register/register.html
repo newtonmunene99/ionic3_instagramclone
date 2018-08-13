@@ -25,7 +25,7 @@
             <ion-item>
               <ion-input type="text" placeholder="Phone"></ion-input>
             </ion-item>
-            <button ion-button block color="primary" class="register-button">Next</button>
+            <button ion-button block color="primary" class="register-button" [disabled]="!phone">Next</button>
           </div>
           <div *ngSwitchCase="'email'" class="emailregister" padding>
             <ion-item>
