@@ -1,5 +1,10 @@
 import { Component } from '@angular/core';
-import { AlertController, LoadingController, IonicPage } from 'ionic-angular';
+import {
+  AlertController,
+  LoadingController,
+  IonicPage,
+  NavController
+} from 'ionic-angular';
 
 @IonicPage()
 @Component({
@@ -11,7 +16,8 @@ export class LoginPage {
 
   constructor(
     public loadingCtrl: LoadingController,
-    public alertCtrl: AlertController
+    public alertCtrl: AlertController,
+    public navCtrl: NavController
   ) {}
 
   login() {
@@ -32,6 +38,6 @@ export class LoginPage {
   }
 
   goToSignup() {
-    // this.navCtrl.push("SignupPage");
+    this.navCtrl.push('RegisterPage');
   }
 }

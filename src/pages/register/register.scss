@@ -1,3 +1,95 @@
 page-register {
+  $transparent-white: rgba(255, 255, 255, 0.6);
+  // This is just to make the header transparent and button/icon with white color
+  .toolbar-content,
+  span {
+    color: white;
+  }
+  .toolbar-background,
+  ion-navbar,
+  ion-header {
+    background: transparent !important;
+    background-color: transparent !important;
+  }
+  .header-md::after,
+  .toolbar-background-ios {
+    background-image: none;
+    border-bottom: 0;
+  }
+  .slide-zoom {
+    p {
+      font-weight: 100;
+      font-size: 11px;
+    }
 
+    height: 100%;
+    div.top {
+      ion-icon {
+        font-size: 8em;
+      }
+    }
+    div.bottom {
+      .segment .segment-button {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        color: rgba(0, 0, 0, 0.6);
+      }
+      .segment .segment-button.segment-activated {
+        border-bottom: 1px solid #000;
+        color: #000;
+      }
+    }
+    // Input items
+    .item {
+      border-radius: 3px !important;
+      padding-left: 0px !important;
+      margin-bottom: 15px !important;
+      margin-bottom: 10px;
+      color: #000 !important;
+      background-color: rgba(255, 255, 255, 0.2) !important;
+      font-size: 0.9em;
+      .item-inner {
+        padding: 0;
+      }
+      ion-input {
+        background-color: color($colors, light);
+        border: 1px solid rgba(183, 180, 180, 0.4);
+        border-radius: 3px;
+      }
+    }
+    ::-webkit-input-placeholder {
+      color: black !important;
+    }
+    .item-inner {
+      border-bottom: 0 !important;
+      box-shadow: none !important;
+    }
+    // --
+    .register-button {
+      text-transform: none;
+      border-radius: 3px !important;
+      box-shadow: none;
+    }
+  }
+
+  // Footer
+  ion-footer {
+    height: 47px;
+  }
+  .footer {
+    text-align: center;
+
+    min-height: 47px;
+    .toolbar-content {
+      span {
+        color: color($colors, dark);
+        font-weight: 100;
+        font-size: 11px;
+      }
+    }
+  }
+
+  .footer-md::before {
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    background-image: none;
+  }
 }

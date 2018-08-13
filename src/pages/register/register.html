@@ -4,15 +4,80 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
-<ion-header>
 
-  <ion-navbar>
-    <ion-title>register</ion-title>
-  </ion-navbar>
-
-</ion-header>
-
-
-<ion-content padding>
+<ion-content padding class="transparent-header">
+  <ion-header>
+    <ion-navbar>
+    </ion-navbar>
+  </ion-header>
+  <ion-slides>
+    <ion-slide>
+      <div class="top">
+        <ion-icon name="contact"></ion-icon>
+      </div>
+      <div class="bottom">
+        <ion-segment [(ngModel)]="registerMode">
+          <ion-segment-button value="phone">PHONE</ion-segment-button>
+          <ion-segment-button value="email">EMAIL</ion-segment-button>
+        </ion-segment>
+        <div [ngSwitch]="registerMode" class="registerinputs">
+          <div *ngSwitchCase="'phone'" class="phoneregister" padding>
+            <ion-item>
+              <ion-input type="text" placeholder="Phone"></ion-input>
+            </ion-item>
+            <button ion-button block color="primary" class="register-button">Next</button>
+          </div>
+          <div *ngSwitchCase="'email'" class="emailregister" padding>
+            <ion-item>
+              <ion-input type="email" placeholder="Email"></ion-input>
+            </ion-item>
+            <button ion-button block color="primary" class="register-button">Next</button>
+          </div>
+        </div>
+      </div>
+      <ion-footer>
+        <ion-toolbar class="footer">
+          <div (click)="goToLogin()">
+            <span>Already have an account?
+              <strong>Log in</strong>.</span>
+          </div>
+        </ion-toolbar>
+      </ion-footer>
+    </ion-slide>
+    <ion-slide>
+      <div class="phoneregister" padding>
+        <h4>NAME AND PASSWORD</h4>
+        <ion-item>
+          <ion-input type="text" placeholder="Full name"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input type="text" placeholder="Username"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input type="Password" placeholder="Password"></ion-input>
+        </ion-item>
+        <p>Your contacts are periodically synced and stored on our servers. To remove contacts,go to Settings and disconnect.
+          <strong>Learn More</strong>.</p>
+        <button ion-button block color="primary" class="register-button">Next</button>
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <div class="phoneregister" padding>
+        <h4>WELCOME TO INSTAGRAM,</h4>
+        <h5>nen.e_</h5>
+        <p>Find people to follow and start sharing photos. You can change ypur username anytime.</p>
+        <button ion-button block color="primary" class="register-button">Next</button>
+      </div>
+      <ion-footer>
+        <ion-toolbar class="footer">
+          <div (click)="goToLogin()">
+            <span>By clicking next, you agree to our
+              <strong>Terms,Data Policy</strong> and
+              <strong>Cookies Policy</strong>.</span>
+          </div>
+        </ion-toolbar>
+      </ion-footer>
+    </ion-slide>
+  </ion-slides>
 
 </ion-content>

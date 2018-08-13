@@ -11,15 +11,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 @IonicPage()
 @Component({
   selector: 'page-register',
-  templateUrl: 'register.html',
+  templateUrl: 'register.html'
 })
 export class RegisterPage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+  registerMode: any='phone';
+  constructor(public navCtrl: NavController, public navParams: NavParams) {}
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad RegisterPage');
   }
-
+  goToLogin() {
+    this.navCtrl.push('LoginPage');
+  }
 }
