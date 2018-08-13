@@ -15,7 +15,6 @@ import { MyApp } from './app.component';
       pageTransition: 'ios-transition'
     }),
     SuperTabsModule.forRoot()
-   
   ],
   bootstrap: [IonicApp],
   entryComponents: [MyApp],
@@ -23,7 +22,6 @@ import { MyApp } from './app.component';
     StatusBar,
     SplashScreen,
     { provide: ErrorHandler, useClass: IonicErrorHandler }
-   
   ]
 })
 export class AppModule {}
