@@ -7,7 +7,8 @@ import { SuperTabsModule } from 'ionic2-super-tabs';
 import { MyApp } from './app.component';
 import { HttpClientModule } from '../../node_modules/@angular/common/http';
 import { AuthProvider } from '../providers/auth/auth';
-
+import { MediaProvider } from '../providers/media/media';
+//import { AngularCropperjsModule } from 'angular-cropperjs';
 @NgModule({
   declarations: [MyApp],
   imports: [
@@ -18,6 +19,7 @@ import { AuthProvider } from '../providers/auth/auth';
     }),
     SuperTabsModule.forRoot(),
     HttpClientModule
+    //AngularCropperjsModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [MyApp],
@@ -25,7 +27,8 @@ import { AuthProvider } from '../providers/auth/auth';
     StatusBar,
     SplashScreen,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
-    AuthProvider
+    AuthProvider,
+    MediaProvider
   ]
 })
 export class AppModule {}

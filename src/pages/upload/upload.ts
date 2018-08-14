@@ -11,15 +11,15 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 @IonicPage()
 @Component({
   selector: 'page-upload',
-  templateUrl: 'upload.html',
+  templateUrl: 'upload.html'
 })
 export class UploadPage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+  tab1Root: string = 'GalleryUploadPage';
+  tab2Root: string = 'PhotoUploadPage';
+  tab3Root: string = 'VideoUploadPage';
+  constructor(public navCtrl: NavController, public navParams: NavParams) {}
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad UploadPage');
   }
-
 }
