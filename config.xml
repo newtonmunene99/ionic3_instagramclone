@@ -88,8 +88,8 @@
         <variable name="PHOTO_LIBRARY_USAGE_DESCRIPTION" value="To Choose Photos For Upload" />
     </plugin>
     <plugin name="cordova-plugin-file" spec="^6.0.1" />
+    <plugin name="cordova-plugin-network-information" spec="^2.0.1" />
     <plugin name="cordova-plugin-photo-library" spec="^2.1.1">
         <variable name="PHOTO_LIBRARY_USAGE_DESCRIPTION" value="To choose photos" />
     </plugin>
-    <plugin name="cordova-plugin-network-information" spec="^2.0.1" />
 </widget>
