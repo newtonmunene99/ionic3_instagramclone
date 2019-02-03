@@ -1,5 +1,7 @@
 # ionic3_instagramclone
 
+### Ionic 4 in the works
+
 Instagram UI clone using Ionic Framework
 <br/>
 <img width="150" src="https://raw.githubusercontent.com/newtonmunene99/ionic3_instagramclone/master/docs/demo/assets/1.png"/>
